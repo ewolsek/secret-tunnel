@@ -2,6 +2,16 @@
 export default function Entrance() {
   // TODO: call signup when form is submitted
 
+  const { signUp, error, setError } = useAuth()
+  const handleSubmit = (formData) => {
+    const name = formData.get("name");
+    if (!name) {
+      setError ("Enter a name")
+      return
+    }
+    signUp (name);
+  };
+  
   return (
     <>
       <h1>Cave Entrance</h1>

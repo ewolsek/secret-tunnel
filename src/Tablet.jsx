@@ -1,6 +1,10 @@
 /** Button that attempts to use the token in context when clicked */
 export default function Tablet() {
   // TODO: call authenticate when form is submitted
+  const { authenticate } = useAuth ();
+  const handleSubmit = () => {
+    authenticate();
+  }
 
   return (
     <section>
