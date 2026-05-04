@@ -3,7 +3,7 @@ export default function Tablet() {
   // TODO: call authenticate when form is submitted
   const { authenticate } = useAuth ();
   const handleSubmit = () => {
-    authenticate();
+    authenticate ();
   }
 
   return (
